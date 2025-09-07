@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="result"></div>
+
+    <script>
+        //Verifica se o recurso localStorage é suportado no navegador.
+        if (typeof (Storage) !== "undefined") {
+
+            // Armazena um item localmente.
+            localStorage.setItem("nome", "Maria");
+
+            //Recupera o item armazenado localmente.
+            document.getElementById("result").innerHTML = localStorage.getItem("nome");
+
+        } else {
+            document.getElementById("result").innerHTML = "Seu navegador não suporta Web Storage.";
+        }
+    </script>
+</body>
+</html>
